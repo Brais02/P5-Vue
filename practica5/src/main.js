@@ -4,7 +4,8 @@ import router from './router'
 import store from './store'
 
 // BOOTSTRAP
-import 'bootstrap/dist/css/bootstrap.min.css'
+//import 'bootstrap/dist/css/bootstrap.min.css'
+import './css/custom.css'
 import 'bootstrap'
 
 createApp(App).use(store).use(router).mount('#app')
