@@ -3,7 +3,7 @@
     
      <header class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-      <img src="imagenes/logo.png" class="img-fluid shadow-lg ps-2">
+      <img :src="imgSrc" class="img-fluid shadow-lg ps-2">
 
       <div class="centrarElemento">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -26,7 +26,7 @@
               <a class="nav-link disabled fw-bold">Why choose us?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active fw-bold"><router-link to="/about">Blog</router-link></a>
+              <a class="nav-link active fw-bold"><router-link to="/blog">Blog</router-link></a>
             </li>
             <li class="nav-item">
               <a class="nav-link active fw-bold"><router-link to="/shop">Shop</router-link></a>
@@ -40,6 +40,17 @@
   </div>
   <router-view/>
 </template>
+
+<script>
+export default {
+  computed: {
+    imgSrc(){
+      //return "../imagenes/logo.png"
+      return "https://raw.githubusercontent.com/Brais02/P4-Maquetacion/main/src/imagenes/Logo.png?token=GHSAT0AAAAAABROSCC2U45PW7YNEMYRNYFMYQ6IRYQ"
+    }
+  }
+}
+</script>
 
 <style>
 #app {

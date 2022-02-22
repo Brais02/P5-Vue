@@ -1,6 +1,17 @@
 <template>
   <div class="shop">
-    <h1>La tienda</h1>
-    <a class="btn btn-primary">hola</a>
+    <ShopData />
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import ShopData from '@/components/ShopData.vue'
+
+export default {
+  name: 'Shop',
+  components: {
+    ShopData
+  }
+}
+</script>
