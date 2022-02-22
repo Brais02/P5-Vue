@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="fondo">
     
      <header class="navbar navbar-expand-lg navbar-dark bg-primary">
 

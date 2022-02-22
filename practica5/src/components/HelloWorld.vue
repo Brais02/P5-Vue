@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello fondo">
     <div class="container">
       <section class="d-grid gap-3">
         <div class="card mt-3">
