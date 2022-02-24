@@ -38,6 +38,7 @@
                       <td>{{producto.nombre}}</td>
                       <td>{{producto.precio}}</td>
                       <td>{{producto.descripcion}}</td>
+                      <td><button @click="eliminarProducto(producto)">X</button></td>
                     </tr>
                   </tbody>
                 </table>
@@ -73,7 +74,6 @@ export default {
         {nombre: "Prodcuto6" , precio: 60 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 6},
       ],
       carrito: [],
-      sumaObjetos: [],
       suma: 0
     }
   },
@@ -86,7 +86,6 @@ export default {
       let productos = this.carrito.map( productoItem => {
         if(producto.id === productoItem.id){
             producto.cantidad++;
-            producto.precio = productoItem.precio * producto.cantidad
             return producto; // Devuelve el objeto actualizado
         } else{
             return productoItem; // Devuelve los objetos que no están duplicados
@@ -106,6 +105,14 @@ export default {
       const sumaTotal = productoTotal.reduce((partialSum, a) => partialSum + a, 0);
 
       this.suma = sumaTotal;
+    },
+    eliminarProducto(producto) {
+      if(producto.cantidad > 1) {
+        producto.cantidad -= 1;
+      } else {
+        this.carrito.splice(producto, 1);
+      }
+      
     }
     // Más funciones
   }
