@@ -17,15 +17,6 @@
               <a class="nav-link active fw-bold"><router-link to="/">Home</router-link></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled fw-bold">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled fw-bold">Contact us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled fw-bold">Why choose us?</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link active fw-bold"><router-link to="/blog">Blog</router-link></a>
             </li>
             <li class="nav-item">
