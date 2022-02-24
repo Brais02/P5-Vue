@@ -25,6 +25,7 @@
                 <table>
                   <thead>
                     <tr>
+                      <th>Cantidad</th>
                       <th>Producto</th>
                       <th>Precio</th>
                       <th>Descripción</th>
@@ -46,6 +47,9 @@
                 <p>El carrito está vacío</p>
               </div>
               
+              <div>
+                <p>Suma Total: {{suma}}</p>
+              </div>
             </div>
           </div>
 
@@ -69,6 +73,8 @@ export default {
         {nombre: "Prodcuto6" , precio: 60 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 6},
       ],
       carrito: [],
+      sumaObjetos: [],
+      suma: 0
     }
   },
   methods: {
@@ -76,19 +82,30 @@ export default {
       const existe = this.carrito.some(productoItem => producto.id === productoItem.id );
       
     if(existe) {
-        //Actualizamos la cantidad
-        let productos = this.carrito.map( productoItem => {
-          if(producto.id === productoItem.id){
-              producto.cantidad++;
-              return producto; // Devuelve el objeto actualizado
-          } else{
-              return productoItem; // Devuelve los objetos que no están duplicados
-          }
-        });
+      //Actualizamos la cantidad
+      let productos = this.carrito.map( productoItem => {
+        if(producto.id === productoItem.id){
+            producto.cantidad++;
+            producto.precio = productoItem.precio * producto.cantidad
+            return producto; // Devuelve el objeto actualizado
+        } else{
+            return productoItem; // Devuelve los objetos que no están duplicados
+        }
+      });
         this.carrito = [...productos];
       } else {
         this.carrito = [...this.carrito, producto];
       }
+      this.sumarTotal();
+    },
+    sumarTotal() {
+      // Recorremos los productos para obtener los valores del precio
+      let productoTotal = this.carrito.map(producto => producto.precio);
+
+      // La suma total será la reducción de valores
+      const sumaTotal = productoTotal.reduce((partialSum, a) => partialSum + a, 0);
+
+      this.suma = sumaTotal;
     }
     // Más funciones
   }
