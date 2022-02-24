@@ -99,20 +99,25 @@ export default {
     },
     sumarTotal() {
       // Recorremos los productos para obtener los valores del precio
-      let productoTotal = this.carrito.map(producto => producto.precio);
+      // let productoTotal = this.carrito.map(producto => producto.precio);
+
+      this.carrito.forEach(producto => {
+        this.suma = producto.precio * producto.cantidad
+        // console.log(producto.precio)
+      });
 
       // La suma total será la reducción de valores
-      const sumaTotal = productoTotal.reduce((partialSum, a) => partialSum + a, 0);
+      // const sumaTotal = productoTotal.reduce((partialSum, a) => partialSum + a, 0);
 
-      this.suma = sumaTotal;
+      // this.suma = sumaTotal;
     },
     eliminarProducto(producto) {
       if(producto.cantidad > 1) {
         producto.cantidad -= 1;
       } else {
-        this.carrito.splice(producto, 1);
+        this.carrito = this.carrito.filter( productoItem => producto.id !== productoItem.id);
+
       }
-      
     }
     // Más funciones
   }
