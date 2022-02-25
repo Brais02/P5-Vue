@@ -116,14 +116,14 @@ export default {
       if(producto.cantidad > 1) {
         producto.cantidad -= 1;
         producto.precioTotal -= producto.precio
-        console.log(producto)
+        this.sumarTotal();
       } 
       else {
         if(producto.precioTotal !== 0) {
           producto.precioTotal = 0;
         }
         this.carrito = this.carrito.filter( productoItem => producto.id !== productoItem.id);
-        console.log(producto)
+        this.sumarTotal();
       }
     }
     // Más funciones
