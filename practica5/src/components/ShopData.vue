@@ -38,6 +38,7 @@
                       <td>{{producto.nombre}}</td>
                       <td>{{producto.precio}}</td>
                       <td>{{producto.descripcion}}</td>
+                      <td>{{producto.precioTotal}}</td>
                       <td><button @click="eliminarProducto(producto)">X</button></td>
                     </tr>
                   </tbody>
@@ -66,18 +67,20 @@ export default {
   data() {
     return {
       productos: [
-        {nombre: "Prodcuto1" , precio: 12 , descripcion: "Lorem Ipsum dolor setum", cantidad: 1, id: 1},
-        {nombre: "Prodcuto2" , precio: 20 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 2},
-        {nombre: "Prodcuto3" , precio: 23 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 3},
-        {nombre: "Prodcuto4" , precio: 15 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 4},
-        {nombre: "Prodcuto5" , precio: 45 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 5},
-        {nombre: "Prodcuto6" , precio: 60 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 6},
+        {nombre: "Prodcuto1" , precio: 12 , precioTotal : 0, descripcion: "Lorem Ipsum dolor setum", cantidad: 1, id: 1},
+        {nombre: "Prodcuto2" , precio: 20 , precioTotal : 0 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 2},
+        {nombre: "Prodcuto3" , precio: 23 , precioTotal : 0 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 3},
+        {nombre: "Prodcuto4" , precio: 15 , precioTotal : 0 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 4},
+        {nombre: "Prodcuto5" , precio: 45 , precioTotal : 0 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 5},
+        {nombre: "Prodcuto6" , precio: 60 , precioTotal : 0 , descripcion: "Lorem Ipsum dolor setum" , cantidad: 1, id: 6},
       ],
       carrito: [],
+      sumaTotal: [],
       suma: 0
     }
   },
   methods: {
+    // Inserta producto
   	productoInsercion(producto) {
       const existe = this.carrito.some(productoItem => producto.id === productoItem.id );
       
@@ -97,26 +100,24 @@ export default {
       }
       this.sumarTotal();
     },
+    // Suma producto
     sumarTotal() {
-      // Recorremos los productos para obtener los valores del precio
-      // let productoTotal = this.carrito.map(producto => producto.precio);
-
+      console.log(this.productos)
       this.carrito.forEach(producto => {
-        this.suma = producto.precio * producto.cantidad
-        // console.log(producto.precio)
+        producto.precioTotal = producto.precio * producto.cantidad;
       });
-
-      // La suma total será la reducción de valores
-      // const sumaTotal = productoTotal.reduce((partialSum, a) => partialSum + a, 0);
-
-      // this.suma = sumaTotal;
     },
+    // Eliminar Producto
     eliminarProducto(producto) {
       if(producto.cantidad > 1) {
         producto.cantidad -= 1;
-      } else {
+        producto.precioTotal -= producto.precio
+      } 
+      else {
+        if(producto.precioTotal !== 0) {
+          producto.precioTotal = 0;
+        }
         this.carrito = this.carrito.filter( productoItem => producto.id !== productoItem.id);
-
       }
     }
     // Más funciones
