@@ -102,22 +102,28 @@ export default {
     },
     // Suma producto
     sumarTotal() {
-      console.log(this.productos)
       this.carrito.forEach(producto => {
         producto.precioTotal = producto.precio * producto.cantidad;
       });
+
+      this.productos.forEach(producto => {
+        this.suma = this.productos.reduce((a, b) => ({precioTotal: a.precioTotal + b.precioTotal}));
+      });
+
     },
     // Eliminar Producto
     eliminarProducto(producto) {
       if(producto.cantidad > 1) {
         producto.cantidad -= 1;
         producto.precioTotal -= producto.precio
+        console.log(producto)
       } 
       else {
         if(producto.precioTotal !== 0) {
           producto.precioTotal = 0;
         }
         this.carrito = this.carrito.filter( productoItem => producto.id !== productoItem.id);
+        console.log(producto)
       }
     }
     // Más funciones
