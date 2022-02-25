@@ -3,25 +3,28 @@
     <div class="container">
         <div class="row">
 
-          <div class="col">
+          <div class="col col-sm-12 col-md-8">
             <h2>Lista de productos</h2>
 
-            <div class="row">
+            <div class="row justify-content-center">
               <div class="producto col-sm-3 m-2" v-for="producto in productos" :key="producto">
-                <h3>{{producto.nombre}}</h3>
-                <h4>Descripción:</h4>
-                <p>{{producto.descripcion}}</p>
+                <h4 class="text-start">{{producto.nombre}}</h4>
+
+                <p class="text-start"><b>Descripción:</b> <span>{{producto.descripcion}}</span></p>
+
+                <p class="text-start"><b>Precio:</b> <span>{{producto.precio}} $</span></p>
+                
                 <button class="btn btn-primary" @click="productoInsercion(producto)">Comprar</button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col col-sm-12 col-md-4">
             <h4>Carrito</h4>
             
             <div class="carrito">
 
-              <div v-if="carrito.length" v-for="producto in carrito">
+              <div v-if="carrito.length" >
                 <table>
                   <thead>
                     <tr>
@@ -33,13 +36,12 @@
                   </thead>
 
                   <tbody>
-                    <tr>
+                    <tr v-for="producto in carrito">
                       <td>{{producto.cantidad}}</td>
                       <td>{{producto.nombre}}</td>
-                      <td>{{producto.precio}}</td>
+                      <td>{{producto.precio}} $</td>
                       <td>{{producto.descripcion}}</td>
-                      <td>{{producto.precioTotal}}</td>
-                      <td><button @click="eliminarProducto(producto)">X</button></td>
+                      <td><button class="btn btn-danger" @click="eliminarProducto(producto)">X</button></td>
                     </tr>
                   </tbody>
                 </table>
@@ -50,7 +52,7 @@
               </div>
               
               <div>
-                <p>Suma Total: {{suma}}</p>
+                <p>Suma Total: {{suma.precioTotal}} $</p>
               </div>
             </div>
           </div>
