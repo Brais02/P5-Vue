@@ -58,11 +58,15 @@
           </div>
 
         </div>
+        
     </div>
+    <Footer />
  </div>
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue'
+
 export default {
   name: "ShopData",
 
@@ -129,6 +133,9 @@ export default {
       }
     }
     // Más funciones
+  },
+  components: {
+    Footer
   }
 }
 </script>

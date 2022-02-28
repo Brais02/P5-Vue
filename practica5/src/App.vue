@@ -3,7 +3,7 @@
     
      <header class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-      <img :src="imgSrc" class="img-fluid shadow-lg ps-2">
+      <img alt="Logo" src="./assets/logo.webp" class="img-fluid shadow-lg ps-2">
 
       <div class="centrarElemento">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -32,7 +32,7 @@
   <router-view/>
 </template>
 
-<script>
+/*<script>
 export default {
   computed: {
     imgSrc(){
@@ -41,7 +41,7 @@ export default {
     }
   }
 }
-</script>
+</script>*/
 
 <style>
 #app {
