@@ -82,12 +82,7 @@
                 <b>Precio:</b> <span>{{ producto.precio }} $</span>
               </p>
 
-              <button
-                class="btn btn-primary"
-                @click="productoInsercion(producto)"
-              >
-                Comprar
-              </button>
+              <button class="btn btn-primary" @click="productoInsercion(producto)">Comprar</button>
             </div>
           </div>
         </div>
@@ -124,15 +119,17 @@
                   </tr>
                 </tbody>
               </table>
+
+              <div>
+                <p>Suma Total: {{ suma.precioTotal }} $</p>
+              </div>
             </div>
 
             <div v-else>
               <p>El carrito está vacío</p>
             </div>
 
-            <div>
-              <p>Suma Total: {{ suma.precioTotal }} $</p>
-            </div>
+
           </div>
         </div>
       </div>
