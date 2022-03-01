@@ -27,3 +27,5 @@ https://www.pexels.com/ca-es/foto/home-llums-treballant-negoci-1619573/
 Cambio del favicon por uno personalizado
 
 El footer ha sido extraido en un componente propio, en lugar de copiar el texto cada vez
+
+Las imagenes del Carrusel estan creadas con webp y con el minimo de tamaño posible.
