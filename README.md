@@ -13,6 +13,15 @@ https://www.pexels.com/ca-es/foto/llums-mapa-del-mon-mon-terra-41949/
 Imagen de niña con globo terraqueo:
 https://www.pexels.com/ca-es/foto/nena-felic-somrient-nen-8083738/
 
+Proveedor 1:
+https://www.pexels.com/ca-es/foto/mar-platja-costa-botiga-11291048/
+
+Proveedor 2:
+https://www.pexels.com/ca-es/foto/home-monitor-compres-negoci-6665036/
+
+Proveedor 3:
+https://www.pexels.com/ca-es/foto/home-llums-treballant-negoci-1619573/
+
 ## Extras
 
 Cambio del favicon por uno personalizado
