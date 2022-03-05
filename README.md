@@ -15,12 +15,14 @@ Los principios de UX que se aplican en nuestro proyecto son lo siguientes:
 
 ## Aplicaciones de los principios de Tecnicas de Accesibilidad
 <ol>
+    <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/C9" target="_blank">C9</a>, usamos CSS para tener una imagen de fondo propia (En todas las páginas en el background)</li>
+  
+    <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G21" target="_blank">G21</a>, es imposible quedarse encerrado en el contenido de nuestra web (En toda la web, es imposible!)</li>
+  
+    <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G57" target="_blank">G57</a>, el contenido de la web se encuentra ordenado de una manera secuencial por toda la web (Como se puede ver hay cabecera, body y footer)</li>
+  
   <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G115" target="_blank">G115</a>, hacemos uso de elementos semanticos para crear la estructura de la web (Se puede ver muy claro en Home como esta dividido en etiquetas semanticas)</li>
-  
-  <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G21" target="_blank">G21</a>, es imposible quedarse encerrado en el contenido de nuestra web (En toda la web, es imposible!)</li>
-  
-  <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G57" target="_blank">G57</a>, el contenido de la web se encuentra ordenado de una manera secuencial por toda la web (Como se puede ver hay cabecera, body y footer)</li>
-  
+
   <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G141" target="_blank">G141</a>, los headers estan puestos para indicar las secciones de la web (Se puede ver en el Home)</li>
   
   <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G146" target="_blank">G146</a>, el layout que tenemos no hace que salga una scroll bar horizontal (Por todas las paginas)</li>
@@ -28,8 +30,6 @@ Los principios de UX que se aplican en nuestro proyecto son lo siguientes:
   <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G179" target="_blank">G179</a>, el contenido al redimensionar la web se sigue viendo sin que nada desaparezca de la pantalla (Se aplica en todas las páginas pero sonre todo en la de HOME)</li>
   
   <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G185" target="_blank">G185</a>, se pueden acceder a todas las páginas desde la principal (Con el menú de navegación)</li>
-  
-  <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/C9" target="_blank">C9</a>, usamos CSS para tener una imagen de fondo propia (En todas las páginas en el background)</li>
 </ol>
 
 ## Links de las imagenes
