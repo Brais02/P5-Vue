@@ -1,5 +1,9 @@
 # P5-Vue
 
+## LightHouse resultado
+![Aqui estaria el resultado](https://github.com/Brais02/P5-Vue/blob/main/practica5/src/assets/LightHouse.PNG)  
+Como se puede ver tiene un 97% de Accessibility y un 89% de Performance.
+
 ## Aplicaciones de los principios de User Experience
 Los principios de UX que se aplican en nuestro proyecto son lo siguientes:
 <ol>
@@ -14,6 +18,7 @@ Los principios de UX que se aplican en nuestro proyecto son lo siguientes:
 </ol>
 
 ## Aplicaciones de los principios de Tecnicas de Accesibilidad
+Los prinicpios de Tenicas de Accesibilidad en nuestro proyecto son los siguientes:
 <ol>
   <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/C9" target="_blank">C9</a>, usamos CSS para tener una imagen de fondo propia (En todas las páginas en el background)</li>
   
@@ -55,9 +60,10 @@ Proveedor 3:
 https://www.pexels.com/ca-es/foto/home-llums-treballant-negoci-1619573/
 
 ## Extras
+<ol>
+  <li>Cambio del favicon por uno personalizado.</li>
 
-Cambio del favicon por uno personalizado
+  <li>El footer ha sido extraido en un componente propio, en lugar de copiar el texto cada vez.</li>
 
-El footer ha sido extraido en un componente propio, en lugar de copiar el texto cada vez
-
-Las imagenes del Carrusel estan creadas con webp y con el minimo de tamaño posible.
+  <li>Las imagenes del Carrusel estan creadas con webp y con el minimo de tamaño posible.</li>
+</ol>
