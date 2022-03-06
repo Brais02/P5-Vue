@@ -2,7 +2,7 @@
 
 ## LightHouse resultado
 ![Aqui estaria el resultado](https://github.com/Brais02/P5-Vue/blob/main/practica5/src/assets/LightHouse.PNG)  
-Como se puede ver tiene un 97% de Accessibility y un 89% de Performance.
+Como se puede ver tiene un <b>97% de Accessibility</b> y un <b>89% de Performance</b>.
 
 ## Aplicaciones de los principios de User Experience
 Los principios de UX que se aplican en nuestro proyecto son lo siguientes:
